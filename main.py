@@ -14,11 +14,13 @@ ARGUMENTS = [
     Argument('-sk', '--skeleton', type=dict, help='Poses configs'),
     Argument('-sg', '--segment', type=dict, help='Split configs'),
     Argument('-dl', '--download', type=dict, help='Download configs'),
+    Argument('-dc', '--download_checker', type=dict, help='Download checker configs'),
     Argument('-no', '--normalize', type=dict, help='Normalization configs'),
     Argument('-me', '--metadata', type=dict, help='Metadata configs')
 ]
 
 PHASES = {
+    "download_checker": p.DownloadChecker,
     "download": p.Downloader,
     "segment": p.Segmenter,
     "skeleton": p.Skeletor,

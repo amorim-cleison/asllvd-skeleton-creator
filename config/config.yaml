@@ -1,17 +1,24 @@
-work_dir:   ~/work/dataset/
-debug: True
+# work_dir:   ~/work/dataset/
+work_dir:   /media/cleison/Files/work/dataset/
+debug: False
 mode: 3d
 fps_out: 3
 phases: 
-  download, 
-  segment, 
-  skeleton,
-  normalize
+  download_checker,
+  # download, 
+  # segment, 
+  # skeleton,
+  # normalize
 
 metadata:
   debug_items: 2
   path:  ~/work/dataset/dai-asllvd.xlsx
   download_url: http://www.bu.edu/asllrp/dai-asllvd-BU_glossing_with_variations_HS_information-extended-urls-RU.xlsx
+
+download_checker:
+  url: 
+    vid: http://csr.bu.edu/ftp/asl/asllvd/asl-data2/{session}/scene{scene}-camera{camera}.vid
+    mov: http://csr.bu.edu/ftp/asl/asllvd/asl-data2/quicktime/{session}/scene{scene}-camera{camera}.mov
 
 download:
   delete_on_finish: false
